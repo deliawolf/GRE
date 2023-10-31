@@ -26,6 +26,9 @@ Router(config-if)# tunnel destination ip-address
 
 The minimum GRE tunnel configuration requires the specification of the tunnel source address and destination address. You must also configure an IP subnet to provide IP connectivity across the tunnel link.
 
+![Creating a VLAN](https://raw.githubusercontent.com/deliawolf/GRE/main/Screenshot%202023-10-26%20at%2009.09.58.png)
+
+
 R1 Config:
 ```
 R1#conf t
