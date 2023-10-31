@@ -42,7 +42,7 @@ R1(config-if)#tunnel destination 10.10.3.2
 *Oct 26 01:52:47.815: %LINEPROTO-5-UPDOWN: Line protocol on Interface Tunnel0, changed state to up
 R1(config-if)#end
 ```
-R2 Config
+R4 Config
 ```
 R4(config)#interface tunnel 0
 *Oct 26 01:55:06.373: %LINEPROTO-5-UPDOWN: Line protocol on Interface Tunnel0, changed state to down
