@@ -1,5 +1,10 @@
 # GRE
 
+to configure basic GRE there is several step:
+1. create interface "tunnel".
+2. input the GRE ip address(each GRE end has same ip)
+3. input the source & destination ip address(it is different from GRE ip address.)
+
 R1 to R4 is 3 hop away
 
 To implement a GRE tunnel, perform the following actions:
@@ -11,15 +16,15 @@ Router(config)# interface tunnel tunnel-id
 ```
 Router(config-if)# tunnel mode gre ip
 ```
-3. Configure an IP address for the tunnel interface.
+3. Configure an IP address for the tunnel interface.(this is the virtual ip used for the interface tunnel)
 ```
 Router(config-if)# ip address ip-address mask
 ```
-4. Specify the tunnel source IP address.
+4. Specify the tunnel source IP address.(this is ip using on the interface)
 ```
 Router(config-if)# tunnel source ip-address
 ```
-5. Specify the tunnel destination IP address.
+5. Specify the tunnel destination IP address.(this is also ip on the interface)
 ```
 Router(config-if)# tunnel destination ip-address
 ```
@@ -28,6 +33,12 @@ The minimum GRE tunnel configuration requires the specification of the tunnel so
 
 ![Creating a VLAN](https://raw.githubusercontent.com/deliawolf/GRE/main/Screenshot%202023-10-26%20at%2009.09.58.png)
 
+
+NOTE : here we going to create GRE tunnel between for 2 routers(R1 & R4)
+1. we create interface tunnel
+2. we input GRE ip address in here the IPs is(172.16.99.1 for R1 and 172.16.99.2 for R4).
+   as you can see the IPs for each GRE end is having same address
+3. input the source and destination ip for each interface that GRE tunnel will created.
 
 R1 Config:
 ```
